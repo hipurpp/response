@@ -1,4 +1,3 @@
-const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const moment = require("moment");
@@ -39,7 +38,7 @@ fs.readdir("./commands/", (err, files) => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let prefix = config.prefix;
+    let prefix = "+";
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
