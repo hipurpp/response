@@ -72,4 +72,4 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`${member.user.username}#${member.user.discriminator} | ${member.id} est arrivé sur le serveur le `+ moment().format('YYYY-MM-DD'));
   });
   
-  bot.login(config.token);
+  bot.login(process.env.TOKEN);
